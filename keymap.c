@@ -1,17 +1,19 @@
 #include QMK_KEYBOARD_H
-//#include "g/keymap_combo.h"
 
+//define layers
 enum layers {
     base,
     app,
     sreset
 };
 
+//define emojis
 enum unicode_names {
     ROCKET,  // 🚀
     COOL, // 😎
 };
 
+//define unicodes for emojis
 const uint32_t PROGMEM unicode_map[] = {
     [ROCKET] = 0x1F680,
     [COOL] = 0x1F60E,
@@ -31,8 +33,8 @@ enum custom_keycodes {
   OPENFLOW,
   OPENSAFARI,
 
-  SYSPREF, //⇧⌘,
-  VOLMUTE, //⌃⌥M
+  SYSPREF, 
+  VOLMUTE, 
 
   WINLEFT,
   MAXIMISE,
@@ -48,7 +50,7 @@ enum custom_keycodes {
   EXTRUDE,
   FILLET,
 
-  UNDO, //REDO,
+  UNDO, //i want to add REDO soon
   COPY,
   PASTE,
   
@@ -80,6 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         )
 };
 
+//macros send string
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case OPENFIGMA:
@@ -145,7 +148,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case WINLEFT:
         if (record->event.pressed) {
             SEND_STRING(SS_LCTRL(SS_LALT(SS_TAP(X_LEFT))));
- // Moves window to the left
+            
         }
         break;
 
@@ -223,16 +226,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 };
-
-
-
-
-
-/*
-// 
-const uint16_t PROGMEM test_combo1[] = {LSG(KC_COMMA), TG(_LAYER), COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(test_combo1, KC_ESC)
-};
-*/
-
