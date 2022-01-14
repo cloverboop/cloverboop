@@ -4,7 +4,8 @@
 - 💞️ I’m looking to collaborate on ... anything product design!
 - 📫 How to reach me ... ig - @em.dsn  linkedin - Emily Marcos
 
-<!---
-cloverboop/cloverboop is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
+
+this is a keymap that i wrote in 4 days.
+it's for a 4x4 macro keypad by 1upkeyboards.
+very happy with the results but always looking to improve efficiency and learn more!!
